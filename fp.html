@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaúdeTech Analyst – Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="home-style.css">
+</head>
+<body class="dashboard">
+
+<aside class="sidebar">
+  <a class="sidebar-logo" href="home.html">
+    <div class="shield"><i class="fa-solid fa-plus"></i></div>
+    <div class="sidebar-logo-text">
+      <span>SaúdeTech</span>
+      <small>Analyst</small>
+    </div>
+  </a>
+  <nav class="sidebar-nav">
+    <a class="nav-item active" href="#"><i class="fa-solid fa-house"></i> Dashboard</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-list-ul"></i> Fila de Processos</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-chart-line"></i> Análises</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-building-columns"></i> Empresas</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-shield-halved"></i> Regras e Políticas</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-bell"></i> Alertas</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-file-chart-column"></i> Relatórios</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-gear"></i> Configurações</a>
+    <a class="nav-item" href="#"><i class="fa-solid fa-microchip"></i> IA &amp; Insights</a>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="nav-item" onclick="logout()">
+      <i class="fa-solid fa-arrow-left"></i> Recolher menu
+    </div>
+  </div>
+</aside>
+
+<div class="main">
+  <div class="topbar">
+    <div class="topbar-user">
+      <div class="user-avatar"><i class="fa-solid fa-user"></i></div>
+      <div class="user-info">
+        <span>Ana Silva</span>
+        <small>Analista Sênior</small>
+      </div>
+      <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;color:#64748b"></i>
+    </div>
+    <button class="btn-logout" onclick="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</button>
+  </div>
+
+  <div class="content">
+
+    <div class="page-header">
+      <div class="page-header-icon"><i class="fa-solid fa-list-ul"></i></div>
+      <div>
+        <h1>Fila de Processos</h1>
+        <p>Acompanhe e analise os processos em sua fila de trabalho.</p>
+      </div>
+    </div>
+
+    <div class="filters-bar">
+      <div class="filter-wrap">
+        <i class="fa-regular fa-calendar"></i>
+        <select><option>Últimos 30 dias</option><option>Últimos 7 dias</option><option>Últimos 90 dias</option></select>
+        <i class="fa-solid fa-chevron-down filter-caret"></i>
+      </div>
+      <div class="filter-wrap">
+        <i class="fa-solid fa-circle-dot"></i>
+        <select><option>Todos</option><option>Alto</option><option>Médio</option><option>Baixo</option></select>
+        <i class="fa-solid fa-chevron-down filter-caret"></i>
+      </div>
+      <div class="filter-wrap">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+        <select><option>Todos</option><option>Pendente de Análise</option><option>Em Análise</option><option>Aguardando Informações</option></select>
+        <i class="fa-solid fa-chevron-down filter-caret"></i>
+      </div>
+      <div class="filter-wrap">
+        <i class="fa-solid fa-building"></i>
+        <select><option>Todas</option><option>HealthCare Plus S.A.</option><option>Vida &amp; Saúde Operadora</option></select>
+        <i class="fa-solid fa-chevron-down filter-caret"></i>
+      </div>
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder="Buscar por ID ou empresa...">
+      </div>
+      <button class="btn-filter"><i class="fa-solid fa-sliders"></i> Filtros</button>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>ID <span class="sort">⇅</span></th>
+            <th>Empresa <span class="sort">⇅</span></th>
+            <th>Nível de Risco <span class="sort">⇅</span></th>
+            <th>Status <span class="sort">⇅</span></th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="td-id">PRC-2024-000123</td>
+            <td><div class="company-cell"><div class="company-icon"><i class="fa-solid fa-building"></i></div><div><div class="company-name">HealthCare Plus S.A.</div><div class="company-cnpj">CNPJ: 12.345.678/0001-90</div></div></div></td>
+            <td><span class="badge badge-high"><span class="badge-dot"></span>Alto</span></td>
+            <td><span class="status-pill status-pending"><span class="status-dot"></span>Pendente de Análise</span></td>
+            <td><div class="actions-cell"><button class="action-btn"><i class="fa-regular fa-eye"></i></button><button class="action-btn"><i class="fa-regular fa-file-lines"></i></button><button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></div></td>
+          </tr>
+          <tr>
+            <td class="td-id">PRC-2024-000124</td>
+            <td><div class="company-cell"><div class="company-icon"><i class="fa-solid fa-building"></i></div><div><div class="company-name">Vida &amp; Saúde Operadora</div><div class="company-cnpj">CNPJ: 23.456.789/0001-01</div></div></div></td>
+            <td><span class="badge badge-medium"><span class="badge-dot"></span>Médio</span></td>
+            <td><span class="status-pill status-analysis"><span class="status-dot"></span>Em Análise</span></td>
+            <td><div class="actions-cell"><button class="action-btn"><i class="fa-regular fa-eye"></i></button><button class="action-btn"><i class="fa-regular fa-file-lines"></i></button><button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></div></td>
+          </tr>
+          <tr>
+            <td class="td-id">PRC-2024-000125</td>
+            <td><div class="company-cell"><div class="company-icon"><i class="fa-solid fa-building"></i></div><div><div class="company-name">Bem Estar Saúde S.A.</div><div class="company-cnpj">CNPJ: 34.567.890/0001-12</div></div></div></td>
+            <td><span class="badge badge-low"><span class="badge-dot"></span>Baixo</span></td>
+            <td><span class="status-pill status-pending"><span class="status-dot"></span>Pendente de Análise</span></td>
+            <td><div class="actions-cell"><button class="action-btn"><i class="fa-regular fa-eye"></i></button><button class="action-btn"><i class="fa-regular fa-file-lines"></i></button><button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></div></td>
+          </tr>
+          <tr>
+            <td class="td-id">PRC-2024-000126</td>
+            <td><div class="company-cell"><div class="company-icon"><i class="fa-solid fa-building"></i></div><div><div class="company-name">Plano Integral Saúde</div><div class="company-cnpj">CNPJ: 45.678.901/0001-23</div></div></div></td>
+            <td><span class="badge badge-high"><span class="badge-dot"></span>Alto</span></td>
+            <td><span class="status-pill status-waiting"><span class="status-dot"></span>Aguardando Informações</span></td>
+            <td><div class="actions-cell"><button class="action-btn"><i class="fa-regular fa-eye"></i></button><button class="action-btn"><i class="fa-regular fa-file-lines"></i></button><button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></div></td>
+          </tr>
+          <tr>
+            <td class="td-id">PRC-2024-000127</td>
+            <td><div class="company-cell"><div class="company-icon"><i class="fa-solid fa-building"></i></div><div><div class="company-name">Cuidar Mais Saúde Ltda.</div><div class="company-cnpj">CNPJ: 56.789.012/0001-34</div></div></div></td>
+            <td><span class="badge badge-medium"><span class="badge-dot"></span>Médio</span></td>
+            <td><span class="status-pill status-analysis"><span class="status-dot"></span>Em Análise</span></td>
+            <td><div class="actions-cell"><button class="action-btn"><i class="fa-regular fa-eye"></i></button><button class="action-btn"><i class="fa-regular fa-file-lines"></i></button><button class="action-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="pagination-bar">
+        <span>Mostrando 1 a 5 de 25 processos</span>
+        <div class="pagination-pages">
+          <button class="page-btn nav-pg"><i class="fa-solid fa-angles-left"></i></button>
+          <button class="page-btn nav-pg"><i class="fa-solid fa-angle-left"></i></button>
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn nav-pg" style="pointer-events:none">···</button>
+          <button class="page-btn">5</button>
+          <button class="page-btn nav-pg"><i class="fa-solid fa-angle-right"></i></button>
+          <button class="page-btn nav-pg"><i class="fa-solid fa-angles-right"></i></button>
+        </div>
+        <div class="per-page">
+          <select><option>5 por página</option><option>10 por página</option><option>25 por página</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-section">
+      <div class="ai-header">
+        <div class="ai-header-left">
+          <div class="ai-icon"><i class="fa-solid fa-stars"></i></div>
+          <div>
+            <h2>Análise com IA</h2>
+            <p>Insights e recomendações geradas automaticamente.</p>
+          </div>
+        </div>
+        <button class="btn-insights">Ver todos insights <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <div class="ai-cards">
+        <div class="ai-card high">
+          <div class="ai-card-header">
+            <div class="ai-card-id">PRC-2024-000123</div>
+            <div class="ai-priority high"><i class="fa-solid fa-circle-exclamation"></i> Alta Prioridade</div>
+          </div>
+          <div><div class="ai-card-company">HealthCare Plus S.A.</div><div class="ai-card-cnpj">CNPJ: 12.345.678/0001-90</div></div>
+          <div class="ai-card-summary">
+            <i class="fa-solid fa-stars ai-summary-icon"></i>
+            <div><h4>Resumo da Análise com IA</h4><p>Foram identificadas inconsistências relevantes em 3 dimensões: Rede Credenciada, Sinistralidade e Reajuste.</p></div>
+          </div>
+          <button class="btn-details">Ver detalhes da análise</button>
+        </div>
+        <div class="ai-card medium">
+          <div class="ai-card-header">
+            <div class="ai-card-id">PRC-2024-000124</div>
+            <div class="ai-priority medium"><i class="fa-solid fa-circle-half-stroke"></i> Média Prioridade</div>
+          </div>
+          <div><div class="ai-card-company">Vida &amp; Saúde Operadora</div><div class="ai-card-cnpj">CNPJ: 23.456.789/0001-01</div></div>
+          <div class="ai-card-summary">
+            <i class="fa-solid fa-stars ai-summary-icon"></i>
+            <div><h4>Resumo da Análise com IA</h4><p>Riscos moderados identificados em Sinistralidade. Recomendamos aprofundamento na análise de eventos.</p></div>
+          </div>
+          <button class="btn-details">Ver detalhes da análise</button>
+        </div>
+        <div class="ai-card low">
+          <div class="ai-card-header">
+            <div class="ai-card-id">PRC-2024-000125</div>
+            <div class="ai-priority low"><i class="fa-solid fa-circle-check"></i> Baixa Prioridade</div>
+          </div>
+          <div><div class="ai-card-company">Bem Estar Saúde S.A.</div><div class="ai-card-cnpj">CNPJ: 34.567.890/0001-12</div></div>
+          <div class="ai-card-summary">
+            <i class="fa-solid fa-stars ai-summary-icon"></i>
+            <div><h4>Resumo da Análise com IA</h4><p>Não foram identificados riscos relevantes no momento. Empresa dentro dos parâmetros esperados.</p></div>
+          </div>
+          <button class="btn-details">Ver detalhes da análise</button>
+        </div>
+        <div class="ai-card high">
+          <div class="ai-card-header">
+            <div class="ai-card-id">PRC-2024-000126</div>
+            <div class="ai-priority high"><i class="fa-solid fa-circle-exclamation"></i> Alta Prioridade</div>
+          </div>
+          <div><div class="ai-card-company">Plano Integral Saúde</div><div class="ai-card-cnpj">CNPJ: 45.678.901/0001-23</div></div>
+          <div class="ai-card-summary">
+            <i class="fa-solid fa-stars ai-summary-icon"></i>
+            <div><h4>Resumo da Análise com IA</h4><p>Alto risco identificado em Reclamações e Sinistralidade. Histórico de eventos críticos recorrentes.</p></div>
+          </div>
+          <button class="btn-details">Ver detalhes da análise</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function logout() { window.location.href = 'home.html'; }
+</script>
+</body>
+</html>

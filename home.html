@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaúdeTech – Vigilância Sanitária</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="home-style.css">
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">
+    <div class="shield"><i class="fa-solid fa-plus"></i></div>
+    <div>
+      <span>SaúdeTech</span>
+      <small>Vigilância Sanitária</small>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" class="active">Início</a></li>
+    <li><a href="#">Soluções</a></li>
+    <li><a href="#">Benefícios</a></li>
+    <li><a href="#">Recursos</a></li>
+    <li><a href="#">Sobre</a></li>
+    <li><a href="#">Contato</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn-outline" onclick="openModal()"><i class="fa-regular fa-user"></i> Login</button>
+    <button class="btn-primary" onclick="openModal()"><i class="fa-solid fa-user-plus"></i> Cadastro</button>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>SaúdeTech – Modernização da Vigilância Sanitária</h1>
+    <p>Tecnologia e inovação para transformar a gestão, otimizar processos e proteger a saúde da população.</p>
+    <button class="btn-cta" onclick="openModal()"><i class="fa-solid fa-chart-line"></i> Conheça nossas soluções</button>
+  </div>
+  <div class="hero-visual">
+    <div class="mockup-bar"><span></span><span></span><span></span></div>
+    <div class="mockup-inner">
+      <div class="mockup-sidebar">
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <div class="mockup-content">
+        <div class="mockup-row">
+          <div class="mockup-card"><div class="icon-box"></div><div class="line" style="width:60%"></div><div class="line" style="width:80%"></div></div>
+          <div class="mockup-card"><div class="icon-box"></div><div class="line" style="width:50%"></div><div class="line" style="width:70%"></div></div>
+          <div class="mockup-card"><div class="icon-box"></div><div class="line" style="width:70%"></div><div class="line" style="width:55%"></div></div>
+        </div>
+        <div class="mockup-chart">
+          <div class="chart-line">
+            <svg viewBox="0 0 200 60" preserveAspectRatio="none">
+              <polyline points="0,50 30,35 60,42 90,20 120,28 150,12 180,18 200,8" fill="none" stroke="#0d9488" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="90" cy="20" r="3.5" fill="#0d9488"/>
+              <circle cx="150" cy="12" r="3.5" fill="#0d9488"/>
+              <circle cx="200" cy="8" r="3.5" fill="#0d9488"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits-section">
+  <h2>Benefícios para uma gestão mais eficiente e segura</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fa-solid fa-brain"></i></div>
+      <h3>Análise Inteligente</h3>
+      <p>Dados integrados e análise inteligente para decisões mais assertivas.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fa-solid fa-bolt"></i></div>
+      <h3>Mais Agilidade</h3>
+      <p>Automatização de processos para mais agilidade nas análises e respostas.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fa-solid fa-shield-check"></i></div>
+      <h3>Transparência</h3>
+      <p>Informações claras e acessíveis para promover confiança e colaboração.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon"><i class="fa-solid fa-barcode"></i></div>
+      <h3>Rastreabilidade</h3>
+      <p>Rastreie produtos e processos de ponta a ponta com mais segurança.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner-wrap">
+  <div class="cta-banner">
+    <div class="cta-banner-left">
+      <div class="cta-banner-icon"><i class="fa-solid fa-people-group"></i></div>
+      <div>
+        <h2>Pronto para transformar sua Vigilância Sanitária?</h2>
+        <p>Junte-se a cidades e órgãos que já modernizaram sua gestão com o SaúdeTech.</p>
+      </div>
+    </div>
+    <button class="btn-cta-white" onclick="openModal()"><i class="fa-solid fa-arrow-right"></i> Fale com um especialista</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="nav-logo" style="color:white">
+        <div class="shield"><i class="fa-solid fa-plus"></i></div>
+        <div><span style="color:white">SaúdeTech</span><small>Vigilância Sanitária</small></div>
+      </div>
+      <p>Soluções tecnológicas para modernizar a Vigilância Sanitária e proteger a saúde da população.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul><li><a href="#">Sobre nós</a></li><li><a href="#">Missão, Visão e Valores</a></li><li><a href="#">Política de Privacidade</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Soluções</h4>
+      <ul><li><a href="#">Plataforma</a></li><li><a href="#">Funcionalidades</a></li><li><a href="#">Integrações</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Suporte</h4>
+      <ul><li><a href="#">Central de Ajuda</a></li><li><a href="#">Documentação</a></li><li><a href="#">Fale Conosco</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul><li><a href="#">contato@saudetech.com.br</a></li><li><a href="#">(11) 4000-1234</a></li><li><a href="#">São Paulo – SP</a></li></ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2024 SaúdeTech. Todos os direitos reservados.</div>
+</footer>
+
+<!-- MODAL LOGIN -->
+<div class="modal-overlay" id="loginModal" onclick="handleOverlayClick(event)">
+  <div class="modal-box">
+    <div class="modal-left">
+      <div class="modal-logo">
+        <div class="shield"><i class="fa-solid fa-plus"></i></div>
+        <span>SaúdeTech</span>
+      </div>
+      <h2>Tecnologia que conecta, inovação que cuida.</h2>
+      <p class="desc">A SaúdeTech é a plataforma completa para gestão em saúde. Mais eficiência, integração e cuidado para profissionais e pacientes.</p>
+      <div class="modal-feature">
+        <div class="feat-icon"><i class="fa-solid fa-people-group"></i></div>
+        <div><h4>Gestão Inteligente</h4><p>Centralize informações e otimize processos com eficiência.</p></div>
+      </div>
+      <div class="modal-feature">
+        <div class="feat-icon"><i class="fa-solid fa-chart-line"></i></div>
+        <div><h4>Dados que Geram Valor</h4><p>Relatórios e indicadores para decisões mais assertivas.</p></div>
+      </div>
+      <div class="modal-feature">
+        <div class="feat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div><h4>Segurança e Conformidade</h4><p>Proteção de dados e aderência às melhores práticas do setor.</p></div>
+      </div>
+    </div>
+    <div class="modal-right">
+      <h2>Bem-vindo de volta!</h2>
+      <p class="subtitle">Entre com sua conta para continuar</p>
+      <div class="form-group">
+        <label>E-mail</label>
+        <div class="input-wrap">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="email" placeholder="seu@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Senha</label>
+        <div class="input-wrap">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="passInput" placeholder="Digite sua senha">
+          <i class="fa-regular fa-eye" style="cursor:pointer" onclick="togglePass()"></i>
+        </div>
+      </div>
+      <div class="forgot-link">Esqueci minha senha</div>
+      <button class="btn-login" onclick="goToDashboard()"><i class="fa-regular fa-user"></i> Entrar</button>
+      <div class="or-divider"><span>ou</span></div>
+      <p class="register-link">Ainda não tem uma conta? <a href="#">Cadastre-se</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal() { document.getElementById('loginModal').classList.add('open'); }
+  function handleOverlayClick(e) { if (e.target === document.getElementById('loginModal')) document.getElementById('loginModal').classList.remove('open'); }
+  function togglePass() { const p = document.getElementById('passInput'); p.type = p.type === 'password' ? 'text' : 'password'; }
+  function goToDashboard() { window.location.href = 'fp.html'; }
+</script>
+</body>
+</html>
